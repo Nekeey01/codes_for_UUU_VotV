@@ -1,0 +1,505 @@
+Основные команды консоли (Которые что-то делают в самой игре):
+toggledebugcamera - Включить свободную камеру. Если крутить колёсико мыши вперёд, то скорость передвижения будет возрастать. В обратную сторону - уменьшаться до полной остановки.
+
+teleport - Телепортация. Перемещает игрока туда, куда смотрит центр камеры. Изредка при телепортации бывает, что можно провалиться под текстуры. А если использовать телепортацию с включенной Свободной камерой, то есть шанс на вылет игры (Лично у меня он был один раз из десяти или более)
+
+pause - Ставит игру на паузу. Также это можно сделать при нажатии кнопки 0 на нумпаде. В таком случае не особо удобно пользоваться чит-меню в Песочнице.
+
+stat fps - Добавляет отображение FPS и задержки в MS (Как я понял - задержка между вводом (нажатия кнопок клавиатуры и мыши) и игрой)
+changesize x - Изменяет размер игрока (Не просто делает камеру выше, хитбокс действительно увеличивается, то есть на базу через главный вход уже не получится попасть). X - Значение. Изначально стоит 1.
+
+fov X - Изменяет угол обзора. X - Значение.
+   • 100 - Стандартное значение
+   • 179 - Максимальное нормальное значение
+   • 180 - Картинка ломается и не отображается
+   • 181+ - То же самое, что и 179, только изобрежение перевёрнуто
+   • 270 - То же самое, что и 100, только изображение перевёрнуто
+
+slomo X - Изменяет скорость времени. Чем больше значение, тем быстрее будет идти время. От значения X зависит нагрузка на систему, поэтому при высоких цифрах игра может вылететь, так как ускоряется не само время дня, а вся игра - Керфус будет бегать быстрее, сигналы обрабатываться быстрее, голод и сон уменьшаться быстрее, и т.д. Изначально значение стоит на 1. Также можно уменьшать, используя десятки (0.5, 0.2, 0.001 и т.д.)
+
+open work - Открыть проект игры. Work - Название проекта. Под проектом подрозумевается тестовый мир. Всего их пока что ~180.
+    • untitled_N - под N - номер мира
+       • 63 - Событие the end is near
+       • 84 - Вылет игры
+       • 88 - Вылет игры
+       • 89 - Вылет игры
+
+
+
+Команды на создание предметов:
+
+
+• Электроника:
+summon prop_drive_C - Диск
+summon prop_batts_C - Батарейка
+summon prop_batts_acc_C - Аккумуляторная батарейка
+summon prop_usb_C - ПО для ремонта сервера (Фиолетовый диск)
+summon prop_radioHL_C - Радио
+summon prop_radioNew_C - Ещё одно радио
+summon prop_coffeeMaker_C - Кофемашинка
+summon prop_usb_super_C - ПО для защиты сервера (Золотой диск)
+summon prop_camera_bad_C - Камера [Плохая]
+summon prop_camera_C - Камера [Средняя]
+summon prop_camera_good_C - Камера [Хорошая]
+summon prop_map_C - Цифровая карта
+summon prop_beacon_C - Маячок
+summon prop_arcade_C - Аркадный автомат
+summon prop_vending_C - Торговый автомат с едой
+summon prop_vending_soda_C - Торговый автомат с газировкой
+summon prop_tv_C - Телевизор
+summon prop_tv_plasma_C - Плазменный телевизор
+summon prop_tv2_floor_C - Телевизор (Тёмно-серый)
+summon prop_tv2_floor1_C - Телевизор (Белый)
+summon prop_tv2_erie_C - Телевизор в виде головы Эри
+summon prop_drive_debug0_C - Диск 0 уровня
+summon prop_drive_debug1_C - Диск 1 уровня
+summon prop_drive_debug2_C - Диск 2 уровня
+summon prop_drive_debug3_C - Диск 3 уровня
+summon prop_digcam_C - Цифровая камера
+summon prop_fax_C - Принтер
+summon prop_keycard_C - Ключ-карта
+summon prop_cookingPad_C - Портативная электроплита
+summon prop_batteryCharger_C - Зарядное устройство
+summon prop_handradar_C - Радар
+summon prop_skypiece_C - Панель, принимающая вид поверхности, на которой находится (Эффект Хамелиона)
+summon conveyor_1x1_C - Конвейер (1х1)
+summon conveyor_2x1_C - Конвейер (2х1)
+summon conveyor_2x2_C - Конвейер (2х2)
+summon conveyor_4x1_C - Конвейер (4х1)
+summon conveyor_1x1_u_C - Конвейер (1х1) (С наклоном)
+summon conveyor_turnL_1_C - Конвейер с поворотом на лево (Размер 1)
+summon conveyor_turnR_1_C - Конвейер с поворотом на право (Размер 1)
+summon conveyor_turnL_2_C - Конвейер с поворотом на лево (Размер 2)
+summon conveyor_turnR_2_C - Конвейер с поворотом на право (Размер 2)
+
+
+• Машины:
+summon car1_C - Квадроцикл
+summon woodchipper_C - Измельчитель древесины
+summon prop_roomba_C - Брумба (Робот пылесос)
+summon prop_roomba_mx_C - Брумба Maxwell
+summon 3dPrinterAnim_C - 3D принтер
+summon prop_rdrone_C - Дрон ДУ
+summon prop_generatorP_C - Генератор
+summon prop_miner_C - Стойка для майнинга
+summon p_kerfus_C - Керфус Синий
+summon p_kerfus_p_С - Керфус Розовый
+summon p_kerfus_r_С - Керфус Красный
+summon p_kerfus_y_C - Керфус Жёлтый
+summon prop_kerfurOmega_C - Омега Керфус (Голубой)
+summon prop_kerfurOmega_1_C - Омега Керфус (Розовый)
+summon prop_kerfurOmega_2_C - Омега Керфус (Красный)
+summon prop_kerfurOmega_alien_C - Омега Керфус со скином пришельца
+summon prop_kerfurOmega_moniq_C - Омега Керфус со скином Моники
+
+
+• Инструменты:
+summon prop_crowbar_C - Монтировка/Лом
+summon prop_toolbox_C - Ремкоплект (Для Квадроцикла)
+summon prop_hook_C - Крюк
+summon prop_shovel_C - Лопата
+summon prop_mdetect_C - Металлоискатель
+summon prop_passchanger_C - Сменщик паролей
+summon prop_hammer_C - Молоток (WIP)
+summon prop_gdetec_C - Детектор
+summon prop_waterShooter_C - Водяная пушка
+summon prop_waterShooter_arir_C - Водная пушка Ариралов
+summon prop_swatter_C - Мухобойка
+summon prop_radDetec_C - Детектор радиации
+summon 3dPrinterAnim_C - 3D принтер
+summon prop_kitchenKnife_C - Кухонный нож
+summon prop_spatula_C - Шпатель
+summon prop_screwdriver_C - Отвёртка
+summon prop_fireExt_C - Огнетушитель
+summon prop_thermometer_C - Термометр
+summon prop_welder_C - Сварка
+summon prop_ruler_C - Рулетка
+summon prop_mop_C - Швабра
+summon prop_broom_C - Метла
+summon prop_canopener_C - Открывашка
+summon prop_nailgun_C - Гвоздомёт
+summon prop_wallbuilder_C - Строитель стен
+summon prop_wallfixer_C - Ремонтник стен
+summon prop_coingun_C - Пистолет для продаж
+summon prop_physgun_C - Неизвестное перегруженное устройство (Физган)
+summon prop_physgun_soft_C - Неизвестное перегруженное устройство (Физган) (Не знаю, чем отличаются)
+summon prop_binocular_C - Бинокль
+summon prop_plunger_C - Вантуз
+summon prop_tvremote_C - Пульт от телевизора
+
+
+• Оружие:
+summon prop_rifle_C - Старая винтовка
+summon prop_knife_C - Ржавый армейский нож
+summon prop_kitchenKnife_C - Кухонный нож
+summon prop_bombBottle_C - Коктейль Молотова
+summon prop_flaregun_C - Сигнальный пистолет
+summon prop_landmine_C - Мина
+summon prop_grenade_C - Граната
+summon prop_funGun_C - Старая винтовка (1 патрон)
+summon prop_funGun_pistol_C - Старый пистолет (16 патронов)
+summon prop_funGun_auto_C - Старый автомат + Гранатомёт (48 патронов + 1 граната)
+summon prop_funGun_shotgun_C - Двустволка (2 патрона)
+summon prop_funGun_autoshotgun_C - Двустволка (12 патронов)
+summon prop_funGun_doohickey_C - Инопланетное лазерное оружие (Геометрическое)
+summon prop_funGun_kavotia_C - Инопланетное лазерное оружие (Винтовка) (100 патронов)
+summon prop_funGun_igetis_C - Инопланетное лазерное оружие (Более мощная винтовка) (100 патронов)
+summon prop_funGun_propgun_C - Старая винтовка (1 патрон, но без перезарядки, т.е. бесконечный)
+summon prop_funGun_flaregun_C - Сигнальный пистолет (1 патрон)
+summon prop_funGun_minigun_C - Миниган (300 патронов)
+summon prop_funGun_kill_C - Старая винтовка (1 патрон)
+summon prop_funGun_rpg_C - Ракетница (1 ракета)
+summon prop_funGun_rpg_rapid_C - Ракетница (16 ракет)
+summon prop_funGun_stickyLauncher_C - Оружие, стреляющее взрывными грибами (12 грибов)
+summon prop_funGun_jumpershotgun_C - Двустовлка (12 патронов)
+summon prop_funGun_slugpistol_C - Пистолет (1 патрон)
+
+
+• Мебель:
+summon bed_C - Кровать (Не двухярусная)
+summon prop_container_bedsidetable_C - Тумбочка
+summon prop_container_wbedtable_C - Тумбочка
+summon prop_curtains_C - Занавеска
+summon prop_sitChair_C - Деревянный стул
+summon prop_sitChair2_C - Металлический стул
+summon prop_sitChair3_C - Деревянный стул
+summon prop_sitChair4_C - Офисный стул
+summon prop_sitChair5_C - Пластмассовый стул
+summon prop_sitChair6_C - Деревянный стул раскладушка
+summon prop_sitCouchS_C - Диван (Маленький)
+summon prop_sitCouchB_C - Диван (Большой)
+summon prop_sitCouchL_C - Диван (Тот, что находится на базе)
+summon prop_sitSeat_C - Стул
+summon prop_bookshelf_C - Книжная полка
+summon prop_container_drawers_C - Шкафчик
+summon prop_container_wardrobe_C - Гардероб (Шкаф)
+
+
+• Декор:
+summon clocks_C - Часы
+summon prop_tableclock_C - Будильник
+summon prop_wallclock_C - Настенные часы
+summon prop_lamp_C - Керосиновая лампа
+summon prop_spotlight_C - Прожектор (Штатив)
+summon prop_spotlightHead_C - Прожектор (Фонарь)
+summon prop_rug_0_C - Ковёр (Прямоугольник Синий)
+summon prop_rug_1_C - Ковёр (Прямоугольник Красный)
+summon prop_rug_2_C - Ковёр (Прямоугольник Зелёный)
+summon prop_rug_3_C - Ковёр (Прямоугольник Серый)
+summon prop_rug_4_C - Ковёр (Круглый Серый)
+summon prop_rug_5_C - Ковёр (Круглый Коричневый)
+summon prop_rug_6_C - Ковёр (Круглый Белый)
+summon prop_rug_7_C - Ковёр (Круглый Синий)
+summon prop_rug_8_C - Ковёр (Квадратный Белый)
+summon prop_rug_9_C - Ковёр (Квадратный Красный)
+summon prop_rug_10_C - Ковёр (Квадратный Серый)
+summon prop_rug_11_C - Ковёр (Квадратный Коричневый)
+summon prop_rug_12_C - Ковёр (Длинный Красный)
+summon prop_rug_13_C - Ковёр в клеточку (Ариралов)
+summon prop_rug_c_C - Ковёр (Пользовательский)
+summon prop_varg_C - круто смех швед
+summon prop_igp_C - круто страх ктулку чел
+summon prop_mothguy_C - класс весело банан мотылёк
+summon prop_jollylush_C - круто веселье 7 часов
+summon prop_glowstick_C - Химсвет Белый
+summon prop_glowstick_R_C - Химсвет Красный
+summon prop_glowstick_G_C - Химсвет Зелёный
+summon prop_glowstick_B_C - Химсвет Синий
+summon prop_glowstick_C_C - Химсвет Бирюзовый
+summon prop_glowstick_Y_C - Химсвет Жёлтый
+summon prop_glowstick_M_C - Химсвет Розовый
+summon prop_picture_h_C - Картина (Горизонтальная)
+summon prop_picture_s_C - Картина (Квадратная)
+summon prop_picture_v_C - Картина (Вертикальная)
+summon prop_picture_t_C - Картина (Настольная)
+summon prop_baskethoop_C - Баскетбольное кольцо
+summon prop_crystal_C - Световая трубка
+summon prop_grayFigure_C - Фигурка пришельца
+summon prop_flamingo_C - Фламинго
+summon prop_flag_C - Флаг (Средний)
+summon prop_flag_C - Флаг (Средний)
+summon prop_flag_S_C - Флаг (Маленький)
+summon prop_flag_L_C - Флаг (Большой)
+summon prop_deskLamp_C - Настольная лампа
+summon prop_duende_C - Дуенде (Гном)
+summon prop_sitBench_C - Лавочка
+summon prop_pot_s_C - Маленький горшок (Пустой)
+summon prop_pot_s_flower_0_C - Цветок в горшке (Красный)
+summon prop_pot_s_flower_1_C - Цветок в горшке (Фиолетовый)
+summon prop_pot_s_flower_2_C - Цветок в горшке (Маленький красный)
+summon prop_pot_s_flower_3_C - Цветок в горшке (Белый)
+summon prop_pot_s_flower_4_C - Цветок в горшке (Жёлтый)
+summon prop_pot_s_flower_5_C - Цветок в горшке (Трава)
+summon prop_pot_s_flower_6_C - Цветок в горшке (Трава)
+summon prop_pot_s_flower_7_C - Цветок в горшке (Трава)
+summon prop_pot_plant_N_C - Комнатное растение (Куст) N = 0-15
+summon prop_mirror1_C - Зеркало
+summon prop_kelCertificare_C - Сертификат др. Кела
+summon prop_kelplush_C - Плюшевый "Keljoy"
+summon prop_moniquePlush_C - Плюшевая Моника
+summon prop_kelplush1_C - Гигансткий плюшевый "Keljoy"
+summon prop_poster_c_C - Постер (Пользовательский)
+summon prop_poster_0_C - Постер (I Believe)
+summon prop_poster_1_C - Постер (Арирал с планетой в руке)
+summon prop_poster_2_C - Постер (Арирал с креветкой в руках)
+summon prop_poster_3_C - Постер (Низкий Арирал)
+summon prop_poster_4_C - Постер (Кот на ветке)
+summon prop_poster_5_C - Постер (Wash your FILTHY hands)
+summon prop_poster_6_C - Постер (Tired? Drink Coffee!!)
+summon prop_poster_7_C - Постер (Из костра Ариралов)
+summon prop_poster_8_C - Постер (Игровая карта)
+summon prop_farmPot_C - Пустой горшок для растений
+summon prop_wallShelf_C - Настенная полка
+summon prop_dumbell_C - Гантеля
+summon prop_sitBreackroomTable_C - Столик с сидениями
+summon prop_lightIntWall1_C - Настенная лампа (Маленькая)
+summon prop_lightIntWall2_C - Настенная лампа (Большая)
+summon prop_floorlamp_C - Торшер
+summon prop_neonSign_N_C - Неоновая вывеска N = 0-5
+summon prop_charcoal_C - Плюшевая игрушка рыбы
+summon prop_openContainer_C - Пластиковая квадратная корзина для бумаг/книг
+summon prop_openContainer_bowl_L_C - Миска (Большая)
+summon prop_openContainer_bowl_M_C - Миска (Средняя)
+summon prop_openContainer_bowl_S_C - Миска (Маленькая)
+summon prop_openContainer_plate_L_C - Тарелка (Большая)
+summon prop_openContainer_plate_S_C - Тарелка (Маленькая)
+summon prop_goose_C - Плюшевая игрушка
+summon prop_partydemon_C - Плюшевая игрушка
+
+
+• Хранение:
+summon prop_container_bedsidetable_C - Тумбочка
+summon prop_container_wbedtable_C - Тумбочка
+summon prop_container_sbox_C - Большой ящик
+summon prop_box_C - Коробка для дисков
+summon prop_container_orderbox_C - Маленький ящик
+summon prop_container_barrel_C - Бочка
+summon prop_container_crate_C - Ящик
+summon prop_container_pbasket_C - Лукошко/Корзинка
+summon prop_backpack_C - Рюкзак
+summon prop_driveRack_C - Стойка для дисков
+summon prop_container_oldbox_C - Старый деревянный ящик
+summon prop_discBox - Бокс для CD-дисков
+summon prop_container_itemBox_C - Ящик для предметов
+summon prop_container_suitcase_C - Чемодан др. Кела
+summon prop_container_cardboardBox_2x2x2_C - Картонная коробка (2х2х2)
+summon prop_container_cardboardBox_4x2x2_C - Картонная коробка (4х2х2)
+summon prop_container_cardboardBox_4x4x2_C - Картонная коробка (4х4х2)
+summon prop_container_cardboardBox_4x4x4_C - Картонная коробка (4х4х4)
+summon prop_container_cardboardBox_8x4x4_C - Картонная коробка (8х4х4)
+summon prop_container_cardboardBox_8x8x4_C - Картонная коробка (8х8х4)
+summon prop_container_cardboardBox_8x8x8_C - Картонная коробка (8х8х8)
+summon prop_container_fileCabs_C - Четырёхкамерный железный ящик
+summon prop_container_midifridge_C - Мини холодильник
+
+
+
+• Еда + Лекарства:
+summon prop_food_C - Бургер
+summon propp_food_mre_C - ИРП
+summon prop_food_choco_C - Шоколадка
+summon prop_food_shrimp_C - Упаковка креветок
+summon prop_coffeeBag_C - Пакет кофе
+summon prop_food_coffeeCup_C - Стаканчик кофе
+summon prop_foodBox_C - Упаковка лапши
+summon prop_food_cake_C - Торт
+summon prop_pizza_C - Пицца (Обычная) (Без коробки)
+summon prop_pizza_1_C - Пицца (С Ананасами) (Без коробки)
+summon prop_pizza_2_C - Пицца (С Грибами) (Без коробки)
+summon prop_pizza_3_C - Пицца (С Креветками) (Без коробки)
+summon prop_food_taco_C - Тако
+summon prop_meatball_C - Фрикаделька
+summon prop_food_toblerone_C - Тоблерон
+summon prop_food_potato_C - Картошка
+summon prop_food_potato_h_C - 1/2 картошки
+summon prop_food_potato_q_C - 1/4 картошки
+summon prop_food_bun_C - Булочка
+summon prop_food_banana_C - Банан
+summon prop_popcorn_C - Пакет попкрона
+summon prop_fish_N_C - Рыба (Не живая) N = 0-5
+summon prop_fishSteak_N_C - Сырая рыба N = 0-14
+summon prop_food_cheese_C - Сыр
+summon prop_food_cheese_c_C - Сырный куб
+summon prop_food_cheese_s_C - Сырный ломтик
+summon prop_food_potatoCooked_C - Приготовленный картофель
+summon prop_food_potatoCooked_h_C - 1/2 приготовленной картошки
+summon prop_food_potatoCooced_q_C - 1/4 приготовленной картошки
+summon prop_food_croissant_C - Круассан
+summon prop_snack_candy1_C - Конфеты (Maltese)
+summon prop_snack_candy2_C - Конфеты (Gumai)
+summon prop_snack_candy3_C - Конфеты (Gumai Sour)
+summon prop_snack_candy4_C - Конфеты (KandaiBaka)
+summon prop_snack_chips1_C - Чипсы (Nachotos)
+summon prop_snack_chips2_C - Чипсы (Heatos)
+summon prop_snack_chips3_C - Чипсы (Gray's)
+summon prop_soda_fanc_C - Газировка (Fan'C)
+summon prop_soda_meow_C - Газировка (MeowMew)
+summon prop_soda_pee_C - Газировка (PeePsee)
+summon prop_soda_penny_C - Газировка (DrPenny)
+summon prop_soda_shrimp_C - Газировка (Shrimp)
+summon prop_soda_wug_C - Газировка (Wug Hell Beer)
+summon prop_soda_xeta_C - Газировка (XETA NRG)
+summon prop_cookingFood_bread_C - Хлеб
+summon prop_cookingFood_cucumber_C - Огурец
+summon prop_cookingFood_lemon_C - Лимон
+summon prop_cookingFood_mango_C - Манго
+summon prop_cookingFood_orange_C - Мандарин
+summon prop_cookingFood_pineapple_C - Ананас
+summon prop_cookingFood_tomato_C - Помидор
+summon prop_cookingFood_watermelon_C - Арбуз
+summon prop_cookingFood_french_C - Багет
+summon prop_cookingFood_shrimp_C - Креветка
+summon prop_cookingFood_shrimp1_C - Креветка Ариралов
+summon prop_flour_C - Мука
+summon prop_snack_wine_C - Алкоголь
+summon prop_medkit_C - Аптечка
+summon prop_medkit_m_C - Упаковка таблеток
+summon prop_medkit_s_C - Баночка с таблетками
+summon prop_medkit_xs_C - Бутылка сиропа
+summon prop_cancermeds_C - Медикаменты
+
+
+• Грибы:
+summon prop_food_mushroom_C - Гриб
+summon prop_food_redshroom_C - Мухомор
+summon prop_funnyShroomCap_C - Забавный гриб? Просто шляпка от гриба.
+summon prop_puffballMature_C - Дымовой гриб
+summon prop_food_superdeathShroom_C - Гриб, который убьёт игрока
+
+
+• Существа:
+summon prop_cockroachNest_C - Таракан
+summon prop_fish_C - Рыба живая
+summon prop_fish_N_C - Рыба живая N = 6-14
+summon grayboar_C - Киберкабан
+summon antibreather_C - Антибрихер
+summon prop_speen_Child_C - Вечно крутящаяся собака (Призывать на свой страх и риск! Она будет летать по всей карте!)
+summon prop_grunt_C - Плюшевые игрушки, которые пытаются вас убить
+summon p_kerfus_C - Керфус Синий
+summon p_kerfus_p_С - Керфус Розовый
+summon p_kerfus_r_С - Керфус Красный
+summon p_kerfus_y_C - Керфус Жёлтый
+summon prop_kerfurOmega_C - Омега Керфус (Голубой)
+summon prop_kerfurOmega_1_C - Омега Керфус (Розовый)
+summon prop_kerfurOmega_2_C - Омега Керфус (Красный)
+summon prop_kerfurOmega_alien_C - Омега Керфус со скином пришельца
+summon prop_kerfurOmega_moniq_C - Омега Керфус со скином Моники
+summon prop_arirSlapper_C - Арирал
+summon prop_arirFollower_C - Арирал
+
+
+
+• Вещи Ариралов:
+summon prop_poster_1_C - Постер (Арирал с планетой в руке)
+summon prop_poster_2_C - Постер (Арирал с креветкой в руках)
+summon prop_poster_3_C - Постер (Низкий Арирал)
+summon prop_poster_7_C - Постер (Из костра Ариралов)
+summon prop_heater_C - Что-то похожее на бомбу/яйцо Ариралов
+summon prop_wgegg_C - Яйцо Арирала?
+summon prop_arirFoodbox_C - Коробка для еды Ариралов
+summon prop_arirGun_C - Пушка Ариралов (Не рабочая, ивентовая)
+summon prop_arirGun_weapon_C - Пушка Ариралов (Рабочая)
+summon prop_unwiseArir_3_C - Модель Арирала
+summon prop_unwiseArir_4_C - Модель Арирала
+summon ragdoll_ariralLeg_R / L - Нога Арирала Правая / Левая соответственно
+summon prop_arirContainer_C - Контейнер/Ящик Ариралов (OLD)
+summon prop_arirContainer_v2_C - Контейнер/Ящик Ариралов (NEW)
+summon prop_arirGamerYogur_C - Неизвестная субстанция (Йогурт Ариралов)
+summon prop_physgun_C - Неизвестное перегруженное устройство (Физган)
+summon prop_physgun_soft_C - Неизвестное перегруженное устройство (Физган) (Не знаю, чем отличаются)
+summon prop_waterShooter_arir_C - Водная пушка Ариралов
+
+
+• Вещи, которые можно надеть:
+summon prop_equipment_weldMask_C - Сварочная маска
+summon prop_equipment_hazmat_C - Костюм химзащиты
+summon prop_equipment_firesuit_C - Противопожарный костюм
+summon prop_equipment_tinhat_C - Шапочка из фольги
+summon prop_equipment_scuba_C - Подводная маска
+summon prop_scubaTank_C - Балон с воздухом
+summon prop_equipment_bikehelmet_C - Каска
+summon prop_equipment_limbprotection_C - Каска
+summon prop_equipment_bodyprotection_C - Каска
+summon prop_equipment_jetpack_C - Джетпак
+
+
+• Прочее:
+summon prop_gascan_C - Канистра бензина
+summon prop_mannequin_C - Манекен Обычный
+summon prop_mannequin1_C - Манекен Руки в боки
+summon prop_coal_C - Уголь
+summon prop_ammobox_C - Коробка с патронами
+summon prop_bucket_C - Ведро
+summon prop_food_soap_C - Мыло
+summon prop_sponge_C - Губка
+summon prop_sponge_mega_C - МЕГА губка
+summon prop_clipboard_C - Блокнот
+summon prop_clipboard_paper_C - Лист бумаги
+summon prop_food_pumpkin_C - Тыква
+summon prop_glue_C - Клей (пока не знаю, куда добавить)
+summon prop_sleepingbag_C - спальный мешок
+summon prop_dirtball_C - Земля
+summon prop_soos_C - Радиоактивная капсула
+summon prop_speen_C - Деревянный поддон
+summon prop_balloon_C - Воздушный шар
+summon prop_balloonPack_C - Пачка воздушных шариков
+summon prop_roachRepel_C - Средство от тараканов
+summon prop_nail_C - Гвоздь
+summon prop_nail_ax_C - Осевой гвоздь
+summon prop_nail_super_C - Золотой гвоздь
+summon prop_nail_ball_C - Гвоздь в шаре
+summon prop_cigpack_C - Пачка сигарет
+summon prop_radBarrel_C - Бочка с радиоактивными отходами
+summon prop_bombBarrel_C - Взрывная бочка
+summon prop_wendSkull_C - Череп животного
+summon prop_toiletPaperRoll_C - Рулон туалетной бумаги
+summon prop_clipboard_paperSheet_C - Туалетная бумага
+summon prop_workbench_C - Верстак
+summon prop_fireball_C - Горящий футбольный мяч
+summon prop_circularSaw_C - Циркулярный диск
+summon prop_umbrella_C - Зонтик
+summon prop_flare_C - Сигнальная ракета
+summon prop_flareGren_C - Взрывная сигнальная ракета (При спавне взрывается)
+summon prop_waspnest_C - Осиное гнездо
+summon prop_lighter_C - Зажигалка
+summon prop_food_bananaHusk_C - Банановая кожура
+summon prop_stickers_C - Набор стикеров
+summon prop_dart_r_C - Дротик (Красный)
+summon prop_dart_g_C - Дротик (Зелёный)
+summon prop_dart_b_C - Дротик (Синий)
+summon prop_FloatieRing_sit_C - Надувной круг (Голубой)
+summon prop_FloatieRing_sit1_C - Надувной круг (Розовый)
+summon prop_FloatieRing_sit2_C - Надувная креветка
+summon prop_blueprint_C - Чертёж
+summon prop_rope_C - Моток красных нитей
+summon prop_corkboard_C - Прообковая доска
+summon prop_pencil_C - Карандаш
+summon prop_auuwoaa_C - Химсвет с красной стрелкой
+summon prop_deadRoach_C - Мёртвый таракан
+summon prop_ubaitBox_0_C - Коробка ультранаживки (Удача/Жёлтая)
+summon prop_ubaitBox_1_C - Коробка ультранаживки (Приманка/Зелёная)
+summon prop_ubaitBox_2_C - Коробка ультранаживки (Без приманки/Синяя)
+summon prop_ubaitBox_3_C - Коробка ультранаживки (Максимальная/Красная)
+summon prop_garbageBag_C - Полный мусорный мешок
+summon prop_garbageClump_C - Мусор, который можно собрать мусорным мешком
+summon prop_garbBagFold_C - Мешок для мусора
+summon prop_garbBagRoll_C - Рулон мешков для мусора
+summon prop_bucket_mop_C - Ведро для швабры
+summon prop_pin_C - Коробка булавок
+summon prop_sponge_solto_C - Большая губка
+summon prop_bombbox_C - Взрывная коробка
+summon prop_radcube_C - Сжатый радиоактивный материал
+summon prop_blueprint_rad_C - Чертёж радиоактивной капсулы
+summon prop_container_bin2_C - Урна для мусора
+summon prop_container_brickstack_C - Сложенные кирпичи
+summon baocoin_C - Баокоин
+summon prop_carKeys_C - Ключи
+summon prop_bbq_C - Гриль Барбекью
+summon prop_ghostcat_C - Машина призрак
+summon prop_holeDeviceCapsule_C - Капсула Розиталов
+summon prop_trampoline_C - Батут
+summon prop_biotoilet_C - Биотуалет
+summon prop_padlock_C - Замок
+summon prop_leadpipe_C - Труба
+summon prop_gstMaker_C - Металлическая квадратная труба
+madnessCombatMaster_C - Запускает музыку и добавляет надпись с количеством убийств
